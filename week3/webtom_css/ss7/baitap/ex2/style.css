@@ -1,0 +1,23 @@
+#text {
+    text-align: justify;
+    font-size: 18px;
+}
+#opening{
+    text-indent: 42px; 
+}
+
+#body {
+    text-indent: 42px;
+}
+
+#end {
+    text-indent: 42px;
+}
+
+#aqua-text{
+    color: aqua;
+}
+
+.blue-text{
+    color: blue;
+}
