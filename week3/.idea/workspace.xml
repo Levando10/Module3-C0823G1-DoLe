@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="840d6eb0-272e-46d0-aff5-3c9d8d64e1cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/webtom_css/ss6/css1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webtom_css/ss6/ex1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bao-cao-tuan/week2/C0823G1-LeVanDo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../bao-cao-tuan/week2/C0823G1-LeVanDo.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../final/C0823g1-FE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/furama_controller/~$-DN Case Study for Database_v1.3 (2).docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project_servlet/TuDienJsp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project_servlet/TuDienJsp/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2Ybhi9DIJP326xLOwTcafS8Vacc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,7 +38,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "tmp-branch",
-    "last_opened_file_path": "E:/codegym/Module3-C0823G1/week3",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_opened_file_path": "E:/codegym/Module2-C0823G1/week4",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -60,6 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700800310422</updated>
       <workItem from="1700800311452" duration="1013000" />
+      <workItem from="1701308041880" duration="61000" />
     </task>
     <servers />
   </component>

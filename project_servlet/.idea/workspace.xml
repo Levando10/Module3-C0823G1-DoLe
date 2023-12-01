@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4750b4d0-2fe3-4f88-9f2f-13273925ae09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product_discount/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product_discount/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bao-cao-tuan/week3/C0823G1-LeVanDo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../bao-cao-tuan/week3/C0823G1-LeVanDo.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuDienJsp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TuDienJsp/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../week3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week3/webtom_css/ss9/ex1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../week3/webtom_css/ss9/ex1/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +115,7 @@
       <workItem from="1701094762953" duration="127000" />
       <workItem from="1701098485767" duration="162000" />
       <workItem from="1701140527747" duration="172000" />
+      <workItem from="1701352863004" duration="68000" />
     </task>
     <servers />
   </component>

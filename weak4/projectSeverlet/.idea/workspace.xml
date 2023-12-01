@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b80ec3a-24e8-4387-b894-bb4a0138c1de" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../project_servlet/Calculator/src/main/java/com/example/calculator/CalculatorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/java/com/example/ss10_list_customer/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/java/com/example/ss10_list_customer/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-2.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/webapp/WEB-INF/lib/sqljdbc42.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/webapp/listCustomer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bao-cao-tuan/week3/C0823G1-LeVanDo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../bao-cao-tuan/week3/C0823G1-LeVanDo.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project_servlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project_servlet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project_servlet/ChuyenDoiTienTeJsp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project_servlet/ChuyenDoiTienTeJsp/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../project_servlet/TuDienJsp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project_servlet/TuDienJsp/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week3/webtom_css/ss9/ex1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/webtom_css/ss9/ex1/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2YveLxDApHaVUyagsKvcUbObnvX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/codegym/module3-redo/Module3-C0823G1-DoLe/weak4/projectSeverlet/ss10_list_customer",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b80ec3a-24e8-4387-b894-bb4a0138c1de" name="Changes" comment="" />
+      <created>1701410427424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701410427424</updated>
+      <workItem from="1701410428421" duration="47000" />
+      <workItem from="1701416351876" duration="51000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

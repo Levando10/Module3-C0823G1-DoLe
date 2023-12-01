@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vending Machine Project</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <table id="vendingMachineTable" class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>Tên máy</th>
+        <th>Thời gian bắt đầu</th>
+        <th>Thời gian kết thúc</th>
+        <th>Thời gian đã dùng</th>
+        <th>Mở máy</th>
+        <th>Trạng thái máy</th>
+        <th>Dịch vụ</th>
+        <th>Giá tiền</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Your data goes here -->
+    </tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      var data = [
+        { name: "Machine 1", startTime: "2023-11-29 08:00:00", endTime: "2023-11-29 17:00:00", status: "Inactive", price: 10.0 },
+        { name: "Machine 2", startTime: "2023-11-29 09:30:00", endTime: "2023-11-29 18:45:00", status: "Inactive", price: 12.5 },
+        // Add more rows as needed
+        // ...
+        { name: "Machine 20", startTime: "2023-11-29 10:15:00", endTime: "2023-11-29 19:30:00", status: "Inactive", price: 15.0 }
+      ];
+
+      function calculateUsedTime(startTime, endTime) {
+        var start = new Date(startTime);
+        var end = new Date(endTime);
+        var diff = end - start;
+        var hours = Math.floor(diff / 3600000);
+        var minutes = Math.floor((diff % 3600000) / 60000);
+        return hours + "h " + minutes + "m";
+      }
+
+      function updateMachineStatus(rowData, rowIndex) {
+        // Update the status to 'Active' or 'Inactive'
+        rowData.status = rowData.status === 'Inactive' ? 'Active' : 'Inactive';
+
+        // Update the button color, text, and status cell
+        var buttonHtml = rowData.status === 'Inactive'
+          ? '<button class="btn btn-success" onclick="updateMachineStatus(' + JSON.stringify(rowData) + ', ' + rowIndex + ')">Bật máy</button>'
+          : '<button class="btn btn-danger" onclick="updateMachineStatus(' + JSON.stringify(rowData) + ', ' + rowIndex + ')">Tắt máy</button>';
+
+        $('#vendingMachineTable').DataTable()
+          .cell(rowIndex, 4).data(buttonHtml)
+          .cell(rowIndex, 5).data(rowData.status)
+          .draw();
+      }
+
+      function handleServiceSelection(rowData, rowIndex) {
+        // Replace this with your actual code to handle service selection
+        alert("Selected service for machine " + rowData.name);
+      }
+
+      var table = $('#vendingMachineTable').DataTable({
+        data: data,
+        columns: [
+          { data: 'name' },
+          { data: 'startTime' },
+          { data: 'endTime' },
+          { 
+            data: function(row) {
+              return calculateUsedTime(row.startTime, row.endTime);
+            }
+          },
+          { 
+            data: function(row, type, rowIdx, meta) {
+              var buttonHtml = row.status === 'Inactive'
+                ? '<button class="btn btn-success" onclick="updateMachineStatus(' + JSON.stringify(row) + ', ' + rowIdx + ')">Bật máy</button>'
+                : '<button class="btn btn-danger" onclick="updateMachineStatus(' + JSON.stringify(row) + ', ' + rowIdx + ')">Tắt máy</button>';
+
+              return buttonHtml;
+            }
+          },
+          { data: 'status' },
+          { 
+            data: function(row, type, rowIdx, meta) {
+              if (type === 'display' && row.status === 'Inactive') {
+                return '<button class="btn btn-primary" onclick="handleServiceSelection(' + JSON.stringify(row) + ', ' + rowIdx + ')">Chọn dịch vụ</button>';
+              }
+              return '';
+            }
+          },
+          { data: 'price' }
+        ]
+      });
+    });
+  </script>
+
+</body>
+</html>
