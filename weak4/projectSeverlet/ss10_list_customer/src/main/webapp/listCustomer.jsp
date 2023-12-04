@@ -23,13 +23,15 @@
 
 
 <tr>
+    <th>Stt</th>
     <th>Tên</th>
     <th>Ngày Sinh</th>
     <th>Địa chỉ</th>
     <th>Ảnh</th>
 </tr>
-    <c:forEach var="customer" items="${requestScope.customerList}">
+    <c:forEach var="customer" items="${requestScope.customerList}" varStatus="loop">
         <tr>
+            <td>${loop.count}</td>
             <td>${customer.getName()}</td>
             <td>${customer.getBirth()}</td>
             <td>${customer.getAddress()}</td>

@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b80ec3a-24e8-4387-b894-bb4a0138c1de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../project_servlet/Calculator/src/main/java/com/example/calculator/CalculatorServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/java/com/example/ss10_list_customer/controller/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/java/com/example/ss10_list_customer/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/webapp/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/webapp/WEB-INF/lib/sqljdbc42.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss10_list_customer/src/main/webapp/listCustomer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bao-cao-tuan/week3/C0823G1-LeVanDo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../bao-cao-tuan/week3/C0823G1-LeVanDo.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project_servlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project_servlet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project_servlet/ChuyenDoiTienTeJsp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project_servlet/ChuyenDoiTienTeJsp/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../project_servlet/TuDienJsp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../project_servlet/TuDienJsp/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../week3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../week3/webtom_css/ss9/ex1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../week3/webtom_css/ss9/ex1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ManagementProduct/src/main/java/com/example/managementproduct/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ManagementProduct/src/main/java/com/example/managementproduct/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ManagementProduct/src/main/java/com/example/managementproduct/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ManagementProduct/src/main/java/com/example/managementproduct/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo2/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +26,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/codegym/module3-redo/Module3-C0823G1-DoLe/weak4/projectSeverlet/ss10_list_customer",
+    "last_opened_file_path": "E:/codegym/module3-redo/Module3-C0823G1-DoLe/weak4/projectSeverlet/ManagementProduct",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -50,6 +43,7 @@
       <updated>1701410427424</updated>
       <workItem from="1701410428421" duration="47000" />
       <workItem from="1701416351876" duration="51000" />
+      <workItem from="1701516018416" duration="55000" />
     </task>
     <servers />
   </component>
