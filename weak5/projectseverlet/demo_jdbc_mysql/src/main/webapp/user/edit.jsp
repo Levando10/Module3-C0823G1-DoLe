@@ -11,6 +11,11 @@
   <h2>
     <a href="users?action=users">List All Users</a>
   </h2>
+<%--  <p>--%>
+<%--    <c:if test='${requestScope["message"] != null}'>--%>
+<%--      <span class="message">${requestScope["message"]}</span>--%>
+<%--    </c:if>--%>
+<%--  </p>--%>
 </center>
 <div align="center">
   <form method="post">

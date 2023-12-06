@@ -48,15 +48,21 @@ public class ProductServlet extends HttpServlet {
   String description = request.getParameter("description");
   Product product = new Product(id,name,price,description);
   this.productService.saveProduct(product);
-  RequestDispatcher requestDispatcher = request.getRequestDispatcher("product/create.jsp");
-  request.setAttribute("message","Create Success");
     try {
-      requestDispatcher.forward(request,response);
-    } catch (ServletException e) {
-      throw new RuntimeException(e);
+      response.sendRedirect("/product-controller");
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
+
+//  RequestDispatcher requestDispatcher = request.getRequestDispatcher("product/create.jsp");
+//  request.setAttribute("message","Create Success");
+//    try {
+//      requestDispatcher.forward(request,response);
+//    } catch (ServletException e) {
+//      throw new RuntimeException(e);
+//    } catch (IOException e) {
+//      throw new RuntimeException(e);
+//    }
   }
 
   private void handleDeleteProduct(HttpServletRequest request, HttpServletResponse response) {

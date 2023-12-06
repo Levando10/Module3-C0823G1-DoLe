@@ -25,6 +25,26 @@ public class CustomerService implements ICustomerService{
   }
 
   @Override
+  public List<User> searchByCountry(String country) {
+    return iCustomerRepository.searchByCountry(country);
+  }
+
+  @Override
+  public List<User> sortByName() {
+    return iCustomerRepository.sortByName();
+  }
+
+  @Override
+  public User getUserByIdStore(int id) {
+    return iCustomerRepository.getUserByIdStore(id);
+  }
+
+  @Override
+  public void insertUserByIdStore(User user) throws SQLException {
+    iCustomerRepository.insertUserByIdStore(user);
+  }
+
+  @Override
   public void insertUser(User user) throws SQLException {
     iCustomerRepository.insertUser(user);
   }

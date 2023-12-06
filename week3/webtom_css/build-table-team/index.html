@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../ss9/bootstrap-5.2.3-dist/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
    
     <script>
         // tt bat may
@@ -47,7 +49,7 @@
   </nav>
   <!-- Navbar -->
   <br><br>
-    <table class="table table-light container">
+    <table class="table table-light container table-hover">
         <tr>
             <td></td>  <td></td>
             <td><p class="text-center fs-4 fw-bold">Quản lý phòng máy</p></td>
@@ -63,6 +65,7 @@
             <th>Dịch vụ</th>
             <th>Tiền dịch vụ</th>
             <th>Tổng tiền</th>
+            <th>Chi tiết Máy</th>
         </tr>
 
         <tr>
@@ -79,6 +82,7 @@
             </td>
             <td> 0 </td>
             <td> 0 </td>
+            <td><a class="btn btn-primary" href="chitietmay.html" target="_blank">Chi Tiết</a></td>
         </tr>
 
         <tr>
@@ -95,249 +99,10 @@
             </td>
             <td> 0 </td>
             <td> 0 </td>
+            <td><a class="btn btn-primary" href="chitietmay.html" target="_blank">Chi Tiết</a></td>
         </tr>
 
-        <tr>
-            <td> Máy 3 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-
-        <tr>
-            <td> Máy 4 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 5 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 6 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 7 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 8 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 9 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-
-        <tr>
-            <td> Máy 10 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 11 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 12 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 13 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 14 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 15 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 16 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
-
-        <tr>
-            <td> Máy 17 </td>
-            <td> data </td>
-            <td> data </td>
-            <td> data </td>
-            <td> <button class="btn btn-primary" onclick="toggleMachineStatus(this)">Mở Máy</button> </td>
-            <td class="fs-5"> Đang Tắt </td>
-            <td>
-                <a type="button" href="orderFood.html" class="btn btn-secondary" target="_blank" >
-                    Dịch vụ
-                </a>
-            </td>
-            <td> 0 </td>
-            <td> 0 </td>
-        </tr>
+    
     </table>
     <br> <br> <br>
 

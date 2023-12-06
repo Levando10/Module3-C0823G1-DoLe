@@ -11,6 +11,11 @@
     <h2>
         <a href="users?action=users">List All Users</a>
     </h2>
+<%--    <p>--%>
+<%--        <c:if test='${requestScope["message"] != null}'>--%>
+<%--            <span class="message">${requestScope["message"]}</span>--%>
+<%--        </c:if>--%>
+<%--    </p>--%>
 </center>
 <div align="center">
     <form method="post">
@@ -21,19 +26,19 @@
             <tr>
                 <th>User Name:</th>
                 <td>
-                    <input type="text" name="name" id="name" size="45"/>
+                    <input type="text" name="name" id="name" size="45" required/>
                 </td>
             </tr>
             <tr>
                 <th>User Email:</th>
                 <td>
-                    <input type="text" name="email" id="email" size="45"/>
+                    <input type="text" name="email" id="email" size="45" required/>
                 </td>
             </tr>
             <tr>
                 <th>Country:</th>
                 <td>
-                    <input type="text" name="country" id="country" size="15"/>
+                    <input type="text" name="country" id="country" size="15" required/>
                 </td>
             </tr>
             <tr>

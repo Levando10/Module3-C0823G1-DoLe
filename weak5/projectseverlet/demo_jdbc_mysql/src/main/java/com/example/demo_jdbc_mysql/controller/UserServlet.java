@@ -19,7 +19,6 @@ public class UserServlet extends HttpServlet {
   private static final long serialVersionUID = 1L;
   private ICustomerService iCustomerService = new CustomerService();
 
-
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     request.setCharacterEncoding("UTF-8");
@@ -34,6 +33,9 @@ public class UserServlet extends HttpServlet {
           break;
         case "edit":
           updateUser(request, response);
+          break;
+        case "delete":
+//          deleteUser(request,response);
           break;
       }
     } catch (SQLException ex) {
@@ -58,14 +60,47 @@ public class UserServlet extends HttpServlet {
           showEditForm(request, response);
           break;
         case "delete":
-          deleteUser(request, response);
+          showDeleteForm(request, response);
           break;
+        case "search":
+          searchByCountry(request,response);
+          break;
+        case "sort":
+          sortByName(request,response);
         default:
           listUser(request, response);
           break;
       }
     } catch (SQLException ex) {
       throw new ServletException(ex);
+    }
+  }
+
+  private void sortByName(HttpServletRequest request, HttpServletResponse response) {
+    List<User> listUser = iCustomerService.sortByName();
+    RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
+    request.setAttribute("listUser",listUser);
+    try {
+      dispatcher.forward(request,response);
+    } catch (ServletException e) {
+      throw new RuntimeException(e);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+
+  }
+
+  private void searchByCountry(HttpServletRequest request, HttpServletResponse response) {
+    String country = request.getParameter("search_name");
+    List<User> listUser = iCustomerService.searchByCountry(country);
+    RequestDispatcher requestDispatcher = request.getRequestDispatcher("user/list.jsp");
+    request.setAttribute("listUser",listUser);
+    try {
+      requestDispatcher.forward(request,response);
+    } catch (ServletException e) {
+      throw new RuntimeException(e);
+    } catch (IOException e) {
+      throw new RuntimeException(e);
     }
   }
 
@@ -87,10 +122,23 @@ public class UserServlet extends HttpServlet {
   private void showEditForm(HttpServletRequest request, HttpServletResponse response)
       throws SQLException, ServletException, IOException {
     int id = Integer.parseInt(request.getParameter("id"));
-    User existingUser = iCustomerService.selectUser(id);
+    User user = iCustomerService.getUserByIdStore(id);
     RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
-    request.setAttribute("user", existingUser);
+    request.setAttribute("user", user);
     dispatcher.forward(request, response);
+  }
+  private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
+    int id = Integer.parseInt(request.getParameter("id"));
+    try {
+      iCustomerService.deleteUser(id);
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+    try {
+      response.sendRedirect("users");
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
 
   }
 
@@ -100,9 +148,8 @@ public class UserServlet extends HttpServlet {
     String email = request.getParameter("email");
     String country = request.getParameter("country");
     User newUser = new User(name, email, country);
-    iCustomerService.insertUser(newUser);
-    RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
-    dispatcher.forward(request, response);
+    iCustomerService.insertUserByIdStore(newUser);
+    response.sendRedirect("/users");
   }
 
   private void updateUser(HttpServletRequest request, HttpServletResponse response)
@@ -114,19 +161,23 @@ public class UserServlet extends HttpServlet {
 
     User book = new User(id, name, email, country);
     iCustomerService.updateUser(book);
+   response.sendRedirect("/users");
 
-    RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
-    dispatcher.forward(request, response);
   }
 
-  private void deleteUser(HttpServletRequest request, HttpServletResponse response)
-      throws SQLException, IOException, ServletException {
-    int id = Integer.parseInt(request.getParameter("id"));
-    iCustomerService.deleteUser(id);
-
-    List<User> listUser = iCustomerService.selectAllUsers();
-    request.setAttribute("listUser", listUser);
-    RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
-    dispatcher.forward(request, response);
-  }
+//  private void deleteUser(HttpServletRequest request, HttpServletResponse response)
+//    {
+//    int id = Integer.parseInt(request.getParameter("id"));
+//      try {
+//        iCustomerService.deleteUser(id);
+//      } catch (SQLException e) {
+//        throw new RuntimeException(e);
+//      }
+//      try {
+//        response.sendRedirect("users");
+//      } catch (IOException e) {
+//        throw new RuntimeException(e);
+//      }
+//
+//    }
 }

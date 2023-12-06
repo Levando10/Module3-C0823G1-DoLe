@@ -15,4 +15,10 @@ public interface ICustomerService {
   public boolean deleteUser(int id) throws SQLException;
 
   public boolean updateUser(User user) throws SQLException;
+
+  List<User> searchByCountry(String country);
+
+  List<User> sortByName();
+  User getUserByIdStore(int id);
+  void insertUserByIdStore(User user) throws SQLException;
 }
