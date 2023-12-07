@@ -42,30 +42,31 @@
 <!-- Navbar -->
 <br><br>
 <table class="table table-light container table-hover">
+
   <tr>
     <td></td>  <td></td>
-    <td><p style="font-size: 30px" class="text-center fw-bold">Chi Tiết Máy</p></td>
-    <td></td>
-    <td><a href="/may-tinh-servlet" class="btn btn-primary">Back</a></td>
-    <td></td>
+    <td><p style="font-size: 40px" class="text-center fw-bold">Lịch sử thuê</p></td>
+  <tr> <td> <a  class="btn btn-primary" href="/may-tinh-servlet">Home</a></td></tr>
   </tr>
   <tr class="table-primary">
     <th>Mã máy tính</th>
-    <th>Tên máy</th>
-    <th>Ram Máy</th>
-    <th>Chip</th>
-    <th>Hãng</th>
-    <th>Tình trạng máy</th>
+    <th>Mã bảng sử dụng</th>
+    <th>Thời gian bắt đầu</th>
+    <th>Thời gian kết thúc</th>
+    <th>Tiền dịch vụ</th>
+    <th>Chi Tiết dịch vụ</th>
+    <th>Tổng Tiền</th>
   </tr>
 
+<c:forEach items="${historyList}" var="bangsudung">
   <tr>
-    <td>${computer.idMayTinh} </td>
-    <td>${computer.tenMayTinh}</td>
-    <td>${computer.ramMayTinh} </td>
-    <td>${computer.chip}</td>
-    <td >${computer.hang}</td>
-    <td>1</td>
+    <td>${bangsudung.maMayTinh.idMayTinh}</td>
+    <td>${bangsudung.idBangSuDung}</td>
+    <td>${bangsudung.gioBatDau}</td>
+    <td >${bangsudung.gioKetThuc}</td>
+    <td>${bangsudung.maNhanVien.idNhanVien}</td>
   </tr>
+</c:forEach>
 </table>
 <br> <br> <br>
 

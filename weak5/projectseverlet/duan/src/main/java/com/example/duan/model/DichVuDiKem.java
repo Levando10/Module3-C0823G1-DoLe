@@ -50,4 +50,14 @@ public class DichVuDiKem {
   public void setMaLoaiDichVu(LoaiDichVu maLoaiDichVu) {
     this.maLoaiDichVu = maLoaiDichVu;
   }
+
+  @Override
+  public String toString() {
+    return "DichVuDiKem{" +
+        "idDichVuDiKem=" + idDichVuDiKem +
+        ", tenDichVuDiKem='" + tenDichVuDiKem + '\'' +
+        ", giaDichVuDiKem=" + giaDichVuDiKem +
+        ", maLoaiDichVu=" + maLoaiDichVu +
+        '}';
+  }
 }

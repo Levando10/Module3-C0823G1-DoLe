@@ -8,20 +8,22 @@ public class MayTinh {
   private String hang;
   private TinhTrang maTinhTrang;
   private boolean isDelete;
+  private boolean status;
   public MayTinh(int idMayTinh){
     this.idMayTinh = idMayTinh;
   }
 
-  public MayTinh(int idMayTinh, String tenMayTinh, String ramMayTinh, String chip, String hang, boolean isDelete) {
+  public MayTinh(int idMayTinh, String tenMayTinh, String ramMayTinh, String chip, String hang, boolean isDelete, boolean status) {
     this.idMayTinh = idMayTinh;
     this.tenMayTinh = tenMayTinh;
     this.ramMayTinh = ramMayTinh;
     this.chip = chip;
     this.hang = hang;
     this.isDelete = isDelete;
+    this.status = status;
   }
 
-  public MayTinh(int idMayTinh, String tenMayTinh, String ramMayTinh, String chip, String hang, TinhTrang maTinhTrang, boolean isDelete) {
+  public MayTinh(int idMayTinh, String tenMayTinh, String ramMayTinh, String chip, String hang, TinhTrang maTinhTrang, boolean isDelete,boolean status) {
     this.idMayTinh = idMayTinh;
     this.tenMayTinh = tenMayTinh;
     this.ramMayTinh = ramMayTinh;
@@ -29,14 +31,36 @@ public class MayTinh {
     this.hang = hang;
     this.maTinhTrang = maTinhTrang;
     this.isDelete = isDelete;
+    this.status = status;
   }
 
-  public MayTinh(String tenMayTinh, String ramMayTinh, String chip, String hang, TinhTrang maTinhTrang, boolean isDelete) {
+  public MayTinh(String tenMayTinh, String ramMayTinh, String chip, String hang, TinhTrang maTinhTrang, boolean isDelete, boolean status) {
     this.tenMayTinh = tenMayTinh;
     this.ramMayTinh = ramMayTinh;
     this.chip = chip;
     this.hang = hang;
     this.maTinhTrang = maTinhTrang;
+    this.isDelete = isDelete;
+    this.status = status;
+  }
+
+  public MayTinh(int idMayTinh, String ramMayTinh, String chip, String hang, TinhTrang maTinhTrang,
+      boolean isDelete, boolean status) {
+    this.idMayTinh = idMayTinh;
+    this.ramMayTinh = ramMayTinh;
+    this.chip = chip;
+    this.hang = hang;
+    this.maTinhTrang = maTinhTrang;
+    this.isDelete = isDelete;
+    this.status = status;
+  }
+
+  public MayTinh(int idMayTinh, String tenMayTinh, String ramMayTinh, String chip, String hang, Boolean isDelete) {
+    this.idMayTinh = idMayTinh;
+    this.tenMayTinh = tenMayTinh;
+    this.ramMayTinh = ramMayTinh;
+    this.chip = chip;
+    this.hang = hang;
     this.isDelete = isDelete;
   }
 
@@ -94,6 +118,14 @@ public class MayTinh {
 
   public void setDelete(boolean delete) {
     isDelete = delete;
+  }
+
+  public boolean isStatus() {
+    return status;
+  }
+
+  public void setStatus(boolean status) {
+    this.status = status;
   }
 
   @Override

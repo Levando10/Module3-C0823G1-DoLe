@@ -40,32 +40,32 @@
 </nav>
 <!-- Navbar -->
 <br><br>
-<table class="table table-light container-fluid table-hover">
-  <tr>
-    <td><p style="font-size: 30px" class="text-center fw-bold">Quản lý phòng máy</p></td>
-    <td></td>
-  </tr>
-
-  <tr>
-    <td> <a class="btn btn-primary" href="/may-dang-thue-servlet?action=dangthue">Máy đang được thuê</a></td>
-    <td> <a class="btn btn-primary" href="/may-chua-thue-servlet?action=chuathue">Máy chưa được thuê</a></td>
-
-  </tr>
-  <tr class="table-primary">
-    <th>Tên máy</th>
-    <th>Lịch sử</th>
-  </tr>
-  <c:forEach items="${mayTinhList}" var="mayTinh">
-
+<div class="container-fluid">
+  <p class="text-center fs-4 fw-bold">Quản lý máy chưa được thuê </p>
+  <table class="table table-striped">
     <tr>
-      <td><a href="/may-tinh-servlet?action=detail&id=${mayTinh.idMayTinh}">${mayTinh.tenMayTinh}</a></td>
-      <td>
-        <a class="btn btn-success" href="history-rental-servlet?action=historyRental&id=${mayTinh.idMayTinh}">Lịch sử thuê </a>
-      </td>
+      <%--    <td> <a href="/may-tinh-servlet?action=dangthue"><button>Máy đang được thuê</button></a></td>--%>
+      <td> <a class="btn btn-primary" href="/may-dang-thue-servlet?action=dangthue">Máy đang được thuê</a></td>
+      <td> <a  class="btn btn-primary" href="/may-tinh-servlet">Home</a></td>
+    </tr>
+    <tr class="table-primary">
+      <th>Tên máy</th>
+      <th>Mở máy</th>
 
     </tr>
-  </c:forEach>
-</table>
+    <c:forEach items="${mayChuaThue}" var="mayTinh">
+
+      <tr>
+        <td><a href="/may-dang-thue-servlet?action=detail&id=${mayTinh.idMayTinh}">${mayTinh.tenMayTinh}</a></td>
+        <td>  <a class="btn btn-primary"  href="/may-tinh-servlet?action=startTime&idMay=${mayTinh.idMayTinh}" >Mở Máy</a>
+        </td>
+
+
+
+      </tr>
+    </c:forEach>
+  </table>
+</div>
 
 <br> <br> <br>
 
@@ -77,16 +77,7 @@
   </div>
 </footer>
 <script>
-  // function setStartTime() {
-  //   // Get the current time
-  //   var currentTime = new Date();
-  //
-  //   // Format the time (adjust the format as needed)
-  //   var formattedTime = currentTime.toLocaleTimeString();
-  //
-  //   // Update the table cell with the formatted time
-  //   document.getElementById("startTimeHeader").innerText = "Thời gian bắt đầu: " + formattedTime;
-  // }
+
 </script>
 
 <script src="../ss9/bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>

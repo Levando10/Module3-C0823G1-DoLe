@@ -23,6 +23,12 @@ public class CustomerRepository implements ICustomerRepository{
   private static final String SEARCH_BY_COUNTRY = "select * from users where country like (?);";
   private static final String SORT_BY_NAME = "select * from users order by name;";
 
+  private final String INSERT_SP = "call add_user(?,?,?);";
+  private final String SELECT_SP = "call get_all_user();";
+  private final String UPDATE_SP = "call edit_user(?,?,?,?);";
+
+  private final String DELETE_SP = "call delete_user(?);";
+
 
 
   public void  insertUser(User user) throws SQLException {
@@ -30,12 +36,11 @@ public class CustomerRepository implements ICustomerRepository{
 //        " (?, ?, ?);";
     Connection connection = BaseRepository.getConnection();
     try {
-      PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
-      preparedStatement.setString(1, user.getName());
-      preparedStatement.setString(2, user.getEmail());
-      preparedStatement.setString(3, user.getCountry());
-      System.out.println(preparedStatement);
-      preparedStatement.executeUpdate();
+      CallableStatement callableStatement = connection.prepareCall(INSERT_SP);
+      callableStatement.setString(1, user.getName());
+      callableStatement.setString(2, user.getEmail());
+      callableStatement.setString(3, user.getCountry());
+      callableStatement.executeUpdate();
     } catch (SQLException e) {
       printSQLException(e);
     }
@@ -153,8 +158,9 @@ public class CustomerRepository implements ICustomerRepository{
     List<User> users = new ArrayList<>();
     Connection connection = BaseRepository.getConnection();
     try  {
-      PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);
-      ResultSet rs = preparedStatement.executeQuery();
+      CallableStatement callableStatement = connection.prepareCall(SELECT_SP);
+      ResultSet resultSet = callableStatement.executeQuery();
+      ResultSet rs = callableStatement.executeQuery();
       while (rs.next()) {
         int id = rs.getInt("id");
         String name = rs.getString("name");
@@ -172,9 +178,9 @@ public class CustomerRepository implements ICustomerRepository{
     boolean rowDeleted;
     //  DELETE_USERS_SQL = "delete from users where id = ?;";
     Connection connection = BaseRepository.getConnection();
-      PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USERS_SQL);
-      preparedStatement.setInt(1, id);
-      rowDeleted = preparedStatement.executeUpdate() > 0;
+    CallableStatement callableStatement = connection.prepareCall(DELETE_SP);
+    callableStatement.setInt(1, id);
+      rowDeleted = callableStatement.executeUpdate() > 0;
     return rowDeleted;
   }
 
@@ -183,18 +189,33 @@ public class CustomerRepository implements ICustomerRepository{
     // UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
     Connection connection = BaseRepository.getConnection();
     try  {
-      PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL);
+      CallableStatement callableStatement = connection.prepareCall(UPDATE_SP);
 
-      preparedStatement.setString(1, user.getName());
-      preparedStatement.setString(2, user.getEmail());
-      preparedStatement.setString(3, user.getCountry());
-      preparedStatement.setInt(4, user.getId());
+      callableStatement.setString(1, user.getName());
+      callableStatement.setString(2, user.getEmail());
+      callableStatement.setString(3, user.getCountry());
+      callableStatement.setInt(4, user.getId());
 
-      rowUpdated = preparedStatement.executeUpdate() > 0;
+      rowUpdated = callableStatement.executeUpdate() > 0;
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }
     return rowUpdated;
+  }
+  @Override
+  public void addUserTransaction(User user) {
+    Connection connection = BaseRepository.getConnection();
+    try {
+      CallableStatement callableStatement = connection.prepareCall(INSERT_SP);
+      callableStatement.setString(1, user.getName());
+      callableStatement.setString(1, user.getEmail());
+      callableStatement.setString(1, user.getCountry());
+      System.out.println(callableStatement);
+      callableStatement.executeUpdate();
+    } catch (SQLException e) {
+      e.printStackTrace();
+      System.out.println(e);
+    }
   }
 
 
@@ -213,4 +234,5 @@ public class CustomerRepository implements ICustomerRepository{
       }
     }
   }
+
 }

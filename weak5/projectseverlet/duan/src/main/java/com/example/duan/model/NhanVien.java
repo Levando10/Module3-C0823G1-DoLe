@@ -54,4 +54,14 @@ public class NhanVien {
   public void setMaTaiKhoan(TaiKhoan maTaiKhoan) {
     this.maTaiKhoan = maTaiKhoan;
   }
+
+  @Override
+  public String toString() {
+    return "NhanVien{" +
+        "idNhanVien=" + idNhanVien +
+        ", tenNhanVien='" + tenNhanVien + '\'' +
+        ", soDienThoaiNhanVien='" + soDienThoaiNhanVien + '\'' +
+        ", maTaiKhoan=" + maTaiKhoan +
+        '}';
+  }
 }

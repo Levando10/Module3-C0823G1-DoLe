@@ -48,6 +48,10 @@ public class CustomerService implements ICustomerService{
   public void insertUser(User user) throws SQLException {
     iCustomerRepository.insertUser(user);
   }
+  @Override
+  public void addUserTransaction(User user) {
+    iCustomerRepository.addUserTransaction(user);
+  }
 
   @Override
   public User selectUser(int id) {

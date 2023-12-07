@@ -44,27 +44,23 @@
 <table class="table table-light container table-hover">
   <tr>
     <td></td>  <td></td>
-    <td><p style="font-size: 30px" class="text-center fw-bold">Chi Tiết Máy</p></td>
-    <td></td>
-    <td><a href="/may-tinh-servlet" class="btn btn-primary">Back</a></td>
-    <td></td>
+    <td><p class="text-center fs-4 fw-bold">Chi Tiết Sử dụng</p></td>
+
   </tr>
   <tr class="table-primary">
     <th>Mã máy tính</th>
     <th>Tên máy</th>
-    <th>Ram Máy</th>
-    <th>Chip</th>
-    <th>Hãng</th>
-    <th>Tình trạng máy</th>
+    <th>Thời gian bắt đầu</th>
+    <th>Tiền dịch vụ</th>
+    <th>Chi Tiết dịch vụ</th>
   </tr>
 
   <tr>
-    <td>${computer.idMayTinh} </td>
-    <td>${computer.tenMayTinh}</td>
-    <td>${computer.ramMayTinh} </td>
-    <td>${computer.chip}</td>
-    <td >${computer.hang}</td>
+    <td>1 </td>
     <td>1</td>
+    <td >1</td>
+    <td><a href="/may-tinh-servlet" class="btn btn-primary">Back</a></td>
+    <td><a href="/View/orderFood.jsp"><button>Xem</button></a></td>
   </tr>
 </table>
 <br> <br> <br>

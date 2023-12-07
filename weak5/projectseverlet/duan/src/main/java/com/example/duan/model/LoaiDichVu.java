@@ -4,6 +4,10 @@ public class LoaiDichVu {
   private int idLoaiDichVu;
   private String tenLoaiDichVu;
 
+  public LoaiDichVu(int idLoaiDichVu) {
+    this.idLoaiDichVu = idLoaiDichVu;
+  }
+
   public LoaiDichVu(int idLoaiDichVu, String tenLoaiDichVu) {
     this.idLoaiDichVu = idLoaiDichVu;
     this.tenLoaiDichVu = tenLoaiDichVu;
@@ -27,5 +31,13 @@ public class LoaiDichVu {
 
   public void setTenLoaiDichVu(String tenLoaiDichVu) {
     this.tenLoaiDichVu = tenLoaiDichVu;
+  }
+
+  @Override
+  public String toString() {
+    return "LoaiDichVu{" +
+        "idLoaiDichVu=" + idLoaiDichVu +
+        ", tenLoaiDichVu='" + tenLoaiDichVu + '\'' +
+        '}';
   }
 }

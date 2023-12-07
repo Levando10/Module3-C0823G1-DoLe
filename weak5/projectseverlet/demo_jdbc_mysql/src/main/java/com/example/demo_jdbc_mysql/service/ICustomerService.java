@@ -21,4 +21,5 @@ public interface ICustomerService {
   List<User> sortByName();
   User getUserByIdStore(int id);
   void insertUserByIdStore(User user) throws SQLException;
+  void addUserTransaction(User user);
 }

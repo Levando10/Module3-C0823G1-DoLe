@@ -40,32 +40,39 @@
 </nav>
 <!-- Navbar -->
 <br><br>
-<table class="table table-light container-fluid table-hover">
-  <tr>
-    <td><p style="font-size: 30px" class="text-center fw-bold">Quản lý phòng máy</p></td>
-    <td></td>
-  </tr>
+<p class="text-center fs-4 fw-bold">Quản lý Máy  Đang Thuê</p>
+<div class="container-fluid">
+  <table class="table table-striped ">
 
-  <tr>
-    <td> <a class="btn btn-primary" href="/may-dang-thue-servlet?action=dangthue">Máy đang được thuê</a></td>
-    <td> <a class="btn btn-primary" href="/may-chua-thue-servlet?action=chuathue">Máy chưa được thuê</a></td>
-
-  </tr>
-  <tr class="table-primary">
-    <th>Tên máy</th>
-    <th>Lịch sử</th>
-  </tr>
-  <c:forEach items="${mayTinhList}" var="mayTinh">
 
     <tr>
-      <td><a href="/may-tinh-servlet?action=detail&id=${mayTinh.idMayTinh}">${mayTinh.tenMayTinh}</a></td>
-      <td>
-        <a class="btn btn-success" href="history-rental-servlet?action=historyRental&id=${mayTinh.idMayTinh}">Lịch sử thuê </a>
-      </td>
-
+      <%--    <td> <a href="/may-tinh-servlet?action=dangthue"><button>Máy đang được thuê</button></a></td>--%>
+      <td> <a class="btn btn-primary" href="/may-chua-thue-servlet?action=chuathue">Máy chưa được thuê</a></td>
+      <td> <a  class="btn btn-primary" href="/may-tinh-servlet">Home</a></td>
+      <td></td>
     </tr>
-  </c:forEach>
-</table>
+    <tr class="table-primary">
+      <th>Tên máy</th>
+      <th>Mở máy</th>
+      <th>Dịch vụ</th>
+    </tr>
+    <c:forEach items="${mayDangThue}" var="mayTinh">
+
+      <tr>
+        <td><a href="/may-tinh-servlet?action=detail&id=${mayTinh.idMayTinh}">${mayTinh.tenMayTinh}</a></td>
+        <td>
+          <a class="btn btn-danger" href=" /may-tinh-servlet?action=endTime&idMay=${mayTinh.idMayTinh}">Tắt máy</a>
+        </td>
+        <td>
+          <a type="button" href="/may-dang-thue-servlet?action=orderFood&id=${mayTinh.idMayTinh}" class="btn btn-secondary" >
+            Dịch vụ
+          </a>
+        </td>
+
+      </tr>
+    </c:forEach>
+  </table>
+</div>
 
 <br> <br> <br>
 

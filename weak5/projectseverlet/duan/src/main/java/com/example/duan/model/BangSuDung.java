@@ -1,6 +1,6 @@
 package com.example.duan.model;
 
-import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 
 public class BangSuDung {
@@ -10,6 +10,18 @@ public class BangSuDung {
 
   private MayTinh maMayTinh;
   private NhanVien maNhanVien;
+
+  public BangSuDung(int idBangSuDung, LocalDateTime gioBatDau, MayTinh maMayTinh) {
+    this.idBangSuDung = idBangSuDung;
+    this.gioBatDau = gioBatDau;
+    this.maMayTinh = maMayTinh;
+  }
+
+  public BangSuDung(int idBangSuDung,MayTinh maMayTinh ,LocalDateTime gioKetThuc ) {
+    this.idBangSuDung = idBangSuDung;
+    this.gioKetThuc = gioKetThuc;
+    this.maMayTinh = maMayTinh;
+  }
 
   public BangSuDung(int idBangSuDung, LocalDateTime gioBatDau, LocalDateTime gioKetThuc, MayTinh maMayTinh, NhanVien maNhanVien) {
     this.idBangSuDung = idBangSuDung;

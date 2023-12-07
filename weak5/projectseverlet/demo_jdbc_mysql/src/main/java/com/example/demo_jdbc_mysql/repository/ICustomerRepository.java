@@ -23,4 +23,5 @@ public interface ICustomerRepository {
   User getUserByIdStore(int id);
 
   void insertUserByIdStore(User user);
+  void addUserTransaction(User user);
 }
